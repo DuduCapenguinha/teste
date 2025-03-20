@@ -17,11 +17,12 @@ body {
 }
 
 header {
-    background-color: var(--ALVO-BEGE); /* Mantém fundo bege no header */
+    background-color: var(--ALVO-BEGE); /* Fundo bege no header */
 }
 
 section {
     padding-bottom: 5rem;
+    background-color: var(--ALVO-BEGE); /* Fundo bege claro em todas as seções */
 }
 
 .nav-link {
@@ -35,7 +36,6 @@ section {
 }
 
 .inicio-fundo {
-    /* Aula 3 */
     background-image: url('img/4965007.jpg');
     background-size: cover;
     background-position: right;
@@ -101,7 +101,7 @@ h2 {
 }
 
 #galeria {
-    background-color: #FAF4F4;
+    background-color: var(--ALVO-BEGE); /* Fundo bege claro na galeria */
 }
 
 .fundo-galeria {
