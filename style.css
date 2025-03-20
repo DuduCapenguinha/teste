@@ -2,55 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --VERMELHO-SANGUE: #8B0000;
+    --VERMELHO-SANGUE: #8B0000; /* Vermelho sangue */
+    --ALVO-BEGE: #F5F5DC; /* Bege claro */
     --alto-contraste-fundo: #000000;
     --alto-contraste-texto: #ffffff;
     --alto-contraste-link: #ffd700;
-    --laranja-claro: #CB6D43;
-    --fundo-formulario: #F1EDEF;
-    --fundo-galeria: #FAF4F4;
-    --fundo-header: #DAC8B3;
 }
 
 body {
     font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #fff;
-    color: #333;
-    margin: 0;
-    padding: 0;
+    font-family: 'Montserrat';
+    background-color: var(--ALVO-BEGE); /* Fundo bege claro */
+    color: #333; /* Texto padrão */
 }
 
 header {
-    background-color: var(--fundo-header);
-    padding: 1.5rem 0;
+    background-color: var(--ALVO-BEGE); /* Mantém fundo bege no header */
 }
 
-nav img {
-    max-height: 60px;
+section {
+    padding-bottom: 5rem;
 }
 
 .nav-link {
-    color: var(--laranja-claro);
+    color: var(--VERMELHO-SANGUE); /* Texto interativo em vermelho sangue */
     font-weight: 600;
-    text-decoration: none;
 }
 
-.nav-link:hover {
-    color: #8A4F3D;
+.nav-link:hover,
+.nav-link:focus {
+    color: darkred; /* Tom mais escuro de vermelho sangue ao passar o mouse */
 }
 
 .inicio-fundo {
+    /* Aula 3 */
     background-image: url('img/4965007.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: right;
     border-radius: 80px;
     width: 100%;
     height: 606px;
     padding: 40px;
     margin: 0 auto;
-    position: relative;
-    color: white;
 }
 
 .img-inicio {
@@ -69,18 +62,17 @@ nav img {
 }
 
 .botao-inicio {
-    background-color: var(--laranja-claro);
+    background-color: var(--VERMELHO-SANGUE); /* Botão em vermelho sangue */
     border-radius: 30px;
     border: none;
-    padding: 0.75rem 2.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
+    width: 14em;
+    height: 3em;
+    align-content: center;
+    color: #fff; /* Texto branco */
 }
 
 .display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
+    text-shadow: -5px 5px var(--VERMELHO-SANGUE);
 }
 
 #tropicalia {
@@ -88,16 +80,9 @@ nav img {
     padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat, url('img/flor-esquerda.png') bottom left no-repeat;
+    background: url('img/flor.png') top right no-repeat,
+        url('img/flor-esquerda.png') bottom left no-repeat;
     background-size: 180px 180px;
-    background-color: #fff;
-}
-
-#tropicalia h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
 }
 
 #tropicalia .container {
@@ -108,8 +93,15 @@ nav img {
     z-index: 1;
 }
 
+h2 {
+    font-family: 'Lemon', serif;
+    font-size: 2.5em;
+    font-style: normal;
+    color: var(--VERMELHO-SANGUE); /* Título em vermelho sangue */
+}
+
 #galeria {
-    background-color: var(--fundo-galeria);
+    background-color: #FAF4F4;
 }
 
 .fundo-galeria {
@@ -131,24 +123,15 @@ nav img {
     font-weight: bold;
 }
 
-.formulario label {
-    font-weight: 600;
-}
-
-.formulario .form-control {
-    background-color: var(--fundo-formulario);
-}
-
 .formulario button {
-    background-color: var(--laranja-claro);
+    background-color: var(--VERMELHO-SANGUE); /* Botão em vermelho sangue */
     border: none;
     font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    color: #fff; /* Texto branco */
 }
 
-.formulario button:hover {
-    background-color: #8A4F3D;
+.form-control {
+    background-color: #F1EDEF;
 }
 
 .menu-acessibilidade {
@@ -210,33 +193,4 @@ nav img {
 
 .alto-contraste .fundo-galeria {
     background: none;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .inicio-fundo {
-        height: 450px;
-    }
-
-    .img-inicio {
-        width: 100%;
-        height: auto;
-    }
-
-    #tropicalia .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav {
-        flex-direction: column;
-    }
-
-    .nav-item {
-        margin-bottom: 1rem;
-    }
-
-    .formulario {
-        padding: 1.5rem;
-    }
 }
